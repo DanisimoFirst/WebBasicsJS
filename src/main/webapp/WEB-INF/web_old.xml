@@ -1,0 +1,35 @@
+<!DOCTYPE web-app PUBLIC
+ "-//Sun Microsystems, Inc.//DTD Web Application 2.3//EN"
+ "http://java.sun.com/dtd/web-app_2_3.dtd" >
+
+<web-app>
+  <display-name>Archetype Created Web Application</display-name>
+
+  <filter>
+    <filter-name>charsetFilter</filter-name>
+    <filter-class>itstep.learning.filter.CharsetFilter</filter-class>
+  </filter>
+  <filter-mapping>
+    <filter-name>charsetFilter</filter-name>
+    <url-pattern>/*</url-pattern>
+  </filter-mapping>
+
+  <servlet>
+    <servlet-name>homeServlet</servlet-name>
+    <servlet-class>itstep.learning.servlet.HomeServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>formsServlet</servlet-name>
+    <servlet-class>itstep.learning.servlet.FormsServlet</servlet-class>
+  </servlet>
+
+  <servlet-mapping>
+    <servlet-name>homeServlet</servlet-name>
+    <url-pattern>/home</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>formsServlet</servlet-name>
+    <url-pattern>/forms</url-pattern>
+  </servlet-mapping>
+
+</web-app>
